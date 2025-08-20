@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Roller</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2> Dice Roller</h2>
+  <div id="dice">⚀</div>
+  <button onclick="rollDice()">Roll Dice</button>
+
+  <script>
+    function rollDice() {
+      // Dice Unicode symbols ⚀ ⚁ ⚂ ⚃ ⚄ ⚅
+      let diceFaces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+      let randomIndex = Math.floor(Math.random() * 6);
+      document.getElementById("dice").innerText = diceFaces[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
