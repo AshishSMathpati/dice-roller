@@ -2,20 +2,18 @@
 <html>
 <head>
   <title>Dice Roller</title>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h2> Dice Roller</h2>
-  <div id="dice">⚀</div>
+  <img id="dice" src="dice-1.png" alt="Dice">
+  <br><br>
   <button onclick="rollDice()">Roll Dice</button>
 
   <script>
     function rollDice() {
-      // Dice Unicode symbols ⚀ ⚁ ⚂ ⚃ ⚄ ⚅
-      let diceFaces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
-      let randomIndex = Math.floor(Math.random() * 6);
-      document.getElementById("dice").innerText = diceFaces[randomIndex];
+      let randomNumber = Math.floor(Math.random() * 6) + 1;
+      document.getElementById("dice").src = "dice" + randomNumber + ".png";
     }
   </script>
 
